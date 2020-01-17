@@ -6,7 +6,8 @@ const port = 8000;
 
 let server = http.createServer((request, response) => {
     response.statusCode = 200;
-    response.setHeader('Content-Type', 'text/plain');
+    // response.setHeader('Content-Type', 'text/plain');
+    response.writeHead(200, {'Content-Type': 'text/plain'});
     response.end('Hello World');
 });
 
