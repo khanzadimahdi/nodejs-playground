@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+    background: #EFEFEF;
+    font-family: tahoma;
+    color: #FFF;
+}
+
+#todo-table{
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#todo-table form:after{
+    margin: 0;
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input[type="text"]{
+    width: 70%;
+    padding: 20px;
+    background:#181c22;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+}
+
+button{
+    padding: 20px;
+    width: 30%;
+    float: left;
+    background: #F90;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: item-counter;
+}
+
+li{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #F10, #F16);
+}
+
+li:hover{
+    text-decoration: line-through;
+    background: rgba(0,0,0,0.2);
+}
+
+li::before {
+  content: counter(item-counter) " - ";
+  counter-increment: item-counter;
+}
